@@ -1,0 +1,14 @@
+// Copyright (c) Open Enclave SDK contributors.
+// Licensed under the MIT License.
+
+enclave {
+    trusted {
+        /* define ECALLs here. */
+        public int ecall_fibonacci([out, count=count] int *arr, unsigned int count);
+    };
+
+    untrusted {
+        /* define OCALLs here. */
+        int ocall_log([in, string] char *msg);
+    };
+};
