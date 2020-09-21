@@ -59,7 +59,7 @@
             "label": "QEMU (AArch64/ARMv8-A)",
             "type": "process",
             "options": {
-                "cwd": "${workspaceFolder}/devkit/emu/vexpress-qemu_armv8a"
+                "cwd": "~/.config/Code/User/globalStorage/ms-iot.msiot-vscode-openenclave/2.0.0/devkit/emu/vexpress-qemu_armv8a"
             },
             "command": "./qemu-system-aarch64",
             "isBackground": true,
