@@ -17,7 +17,7 @@ int main(int argc, const char* argv[])
         return result;
     }
 
-    int count = 64;
+    int count = 32;
     int *fib = calloc(count, sizeof(int));
 
     if (fib == NULL)
