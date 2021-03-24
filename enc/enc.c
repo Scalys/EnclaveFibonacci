@@ -13,7 +13,8 @@
 // the host to print a message from there.
 
 int ecall_fibonacci(int *arr, unsigned int count) {
-    fprintf(stdout, "Enclave entered\n");
+    int retval = 0;
+    ocall_log(&retval, "Enclave entered");
     for (int i = 0; i < count; ++i) {
         if (i == 0) { 
             arr[0] = 0; 
@@ -23,7 +24,9 @@ int ecall_fibonacci(int *arr, unsigned int count) {
             arr[i] = arr[i-1] + arr[i-2];
         }
     }
-    fprintf(stdout, "Enclave leaved\n");
+    retval = 0;
+    ocall_log(&retval, "Enclave left");
+
     return OE_OK;
 }
 

@@ -61,8 +61,7 @@
             "gdbpath": "/usr/bin/gdb-multiarch",
             "autorun": [
                 "symbol-file ./out/bin/EnclaveFibonacci",
-                "add-symbol-file ./out/bin/de6874ee-7660-4185-ba17-2a61f4aabe76.elf 0x40017020",
-                "b ecall_handle_message"
+                "add-symbol-file ./out/bin/5d286b7e-ff68-4b4b-b7b8-05f55dbfd0c7.elf 0x40017020"
             ]
         }
     ]
