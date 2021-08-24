@@ -41,7 +41,9 @@ if (OE_OPTEE)
 endif ()
 
 if (OE_OPTEE)
-  set(OE_PACKAGE_PREFIX $ENV{HOME}/.config/Code/User/globalStorage/ms-iot.msiot-vscode-openenclave/2.0.0/devkit/sdk/optee)
+  if (NOT OE_PACKAGE_PREFIX)
+    set(OE_PACKAGE_PREFIX "/opt/openenclave-sdk/sdk/optee")
+  endif ()
 
   if (OE_OPTEE_QEMU_ARMV8)
     set(OE_PACKAGE_OPTEE_PLATFORM vexpress-qemu_armv8a)
